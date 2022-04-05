@@ -1,13 +1,9 @@
-from difflib import context_diff
-from multiprocessing import context
-from unicodedata import name
 import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
 import logging
 import random
-import asyncio
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_choice, create_option
 
@@ -55,17 +51,5 @@ async def _orso(ctx: SlashContext):
     embed1 = discord.Embed(title="Ecco un orso a caso (Orso numero " + orso2 + ")")
     embed1.set_image(url="https://raw.githubusercontent.com/Fredbear07/Bears/main/Bears/Bear" + orso2 + ".png")
     await ctx.send(embed=embed1)
-
-# @slash.slash(
-#     name="Orsi",
-#     description="elenco orsi",
-#     guild_ids=[875826540523429929]    
-# )    
-# async def _orsi(ctx: SlashContext):
-#     orso1 = random.randint(1,8)
-#     orso2 = str(orso1)
-#     embed1 = discord.Embed(title="Ecco un orso a caso (Orso numero " + orso2 + ")")
-#     embed1.set_image(url="https://raw.githubusercontent.com/Fredbear07/Bears/main/Bears/Bear" + orso2 + ".png")
-#     await ctx.send(embed=embed1)
 
 bot.run(Ds_Token)
