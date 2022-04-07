@@ -43,7 +43,7 @@ async def cmd1(ctx):
 @slash.slash(
     name="Orso",
     description="8 Foto di orsi casuali",
-    guild_ids=[875826540523429929]    
+    guild_ids=[961643863615893514]    
 )    
 async def _orso(ctx: SlashContext):
     orso1 = random.randint(1,8)
@@ -51,5 +51,13 @@ async def _orso(ctx: SlashContext):
     embed1 = discord.Embed(title="Ecco un orso a caso (Orso numero " + orso2 + ")")
     embed1.set_image(url="https://raw.githubusercontent.com/Fredbear07/Bears/main/Bears/Bear" + orso2 + ".png")
     await ctx.send(embed=embed1)
+    
+@slash.slash(
+    name="Github",
+    description="Codice sorgente e repo del bot",
+    guild_ids=[961643863615893514]    
+)    
+async def _orso(ctx: SlashContext):
+    await ctx.send("https://github.com/Fredbear07/BearBot")
 
 bot.run(Ds_Token)
