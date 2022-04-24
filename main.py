@@ -60,15 +60,4 @@ async def _orso(ctx: SlashContext):
 async def _orso(ctx: SlashContext):
     await ctx.send("https://github.com/Fredbear07/BearBot")
 
-# @slash.slash(
-#     name="?",
-#     description="Le Info Del Server",
-#     guild_ids=[961643863615893514]    
-# )    
-# async def _orso(ctx: SlashContext):
-#     embed1 = discord.Embed(title="")
-#     embed1.set_image(url="https://raw.githubusercontent.com/Fredbear07/Bears/main/Bears/Bear" + orso2 + ".png")
-#     await ctx.send(embed=embed1)
-#     await ctx.send("https://github.com/Fredbear07/BearBot")
-
 bot.run(Ds_Token)
