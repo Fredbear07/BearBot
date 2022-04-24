@@ -11,6 +11,7 @@ load_dotenv()
 
 Ds_Token = os.getenv('TOKEN')
 Prefix = os.getenv('PREFIX')
+GIDS = os.getenv('GIDS')
 
 client = discord.Client()
 bot = commands.Bot(command_prefix=Prefix)
@@ -43,7 +44,7 @@ async def cmd1(ctx):
 @slash.slash(
     name="Orso",
     description="8 Foto di orsi casuali",
-    guild_ids=[961643863615893514]    
+    guild_ids=[GIDS]    
 )    
 async def _orso(ctx: SlashContext):
     orso1 = random.randint(1,8)
@@ -55,9 +56,20 @@ async def _orso(ctx: SlashContext):
 @slash.slash(
     name="Github",
     description="Codice sorgente e repo del bot",
-    guild_ids=[961643863615893514]    
+    guild_ids=[GIDS]    
 )    
 async def _orso(ctx: SlashContext):
+    await ctx.send("https://github.com/Fredbear07/BearBot")
+
+@slash.slash(
+    name="?",
+    description="Le Info Del Server",
+    guild_ids=[GIDS]    
+)    
+async def _orso(ctx: SlashContext):
+    embed1 = discord.Embed(title="")
+    embed1.set_image(url="https://raw.githubusercontent.com/Fredbear07/Bears/main/Bears/Bear" + orso2 + ".png")
+    await ctx.send(embed=embed1)
     await ctx.send("https://github.com/Fredbear07/BearBot")
 
 bot.run(Ds_Token)
